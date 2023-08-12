@@ -76,6 +76,12 @@
             width: 20%;
         }
 
+        .forgetPassword-text{
+            display: flex;
+            justify-content: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
         .singpass-container {
             display: flex;
             margin-top: 20px;
@@ -86,6 +92,11 @@
             width: 300px;
             height: auto;
         }
+
+        .singpass-text {
+            text-align: center;
+        }
+
     </style>
 
 </head>
@@ -102,7 +113,7 @@
             <nav>
                 <a href="aboutUs.html"> About us </a>
                 <a href="register.html"> Register</a>
-                <a href="homepage.html">HomePage</a>
+                <a href="index.html">HomePage</a>
                 <a href="faq.html">FAQ</a>
                 <a href="exchangeRates.html">Exchange Rates</a>
 
@@ -112,18 +123,26 @@
 
         <article>
             <div class="container">
-                <input type="text" id="name" placeholder="FULL NAME" required>
-                <input type="text" id="email" placeholder="EMAIL ADDRESS" required>
-                <input type="text" id="password" placeholder="PASSWORD"required>
-                <br>
-                <div class="confirm-button">
-                    <div class="confirm-container">
-                        <img src="confirmButton.jpg" alt="Confirm" onclick="displayLogInMessage()">
-                        
+                <form id="loginForm">
+                    <input type="text" id="name" placeholder="FULL NAME" required>
+                    <input type="text" id="email" placeholder="EMAIL ADDRESS" required>
+                    <input type="text" id="password" placeholder="PASSWORD" required>
+                    <br>
+                    <div class="confirm-button">
+                        <div class="confirm-container">
+                            <img src="confirmButton.jpg"  alt="Confirm" onclick="handleLogin()">
+                        </div>
                     </div>
-                </div>
+                </form>
+            </div>
+
+            <div class="forgetPassword-text">
+                <a href="forgetPassword.html">Forget password?</a>
             </div>
             
+            <div class="singpass-text">
+                <p>Scan the QR code for Singpass Login!</p>
+            </div>
 
             <div class="singpass-button">
                 <div class="singpass-container">
@@ -132,9 +151,17 @@
             </div>
 
             <script>
-                function displayLogInMessage() {
-                    alert("You're logged in! Beware of fraud! If you suspect fraud, please report it as soon as possible")
-                     }
+                function handleLogin() {
+
+                if (document.getElementById('loginForm').checkValidity()) {
+                    alert("You have logged in! Beware of fraud! If you suspect fraud, please report it as soon as possible ");
+                    window.location.href="index.html";
+                }
+                else{
+                    alert("Please fill in all required fields!")
+                }
+            }
+
             </script>
 
 

@@ -91,7 +91,7 @@
             <nav>
                 <a href="aboutUs.html"> About us </a>
                 <a href="login.html"> Login</a>
-                <a href="homepage.html">HomePage</a>
+                <a href="index.html">HomePage</a>
                 <a href="faq.html">FAQ</a>
                 <a href="exchangeRates.html">Exchange Rates</a>
 
@@ -100,27 +100,36 @@
         </section>
 
         <article>
-            <div class="container">
-                <input type="text" id="Fname" placeholder="Full Name" required>
-                <input type="text" id="email" placeholder="Email Address" required>
-                <input type="text" id="password" placeholder="Password">
-                <input type="text" id="confirm password" placeholder="Confirm Password" required>
-                <input type="text" id="otp" placeholder="OTP: __ __ __ __ __ __" required>
-                
-            </div>
-
-            <div class="confirm-button">
-                <div class="confirm-container">
-                    <img src="confirmButton.jpg" alt="Confirm" onclick="displayRegisterMessage()">
+            <form id="registerForm">
+                <div class="container">
+                    <input type="text" id="Fname" placeholder="Full Name" required>
+                    <input type="text" id="email" placeholder="Email Address" required>
+                    <input type="text" id="password" placeholder="Password">
+                    <input type="text" id="confirm password" placeholder="Confirm Password" required>
+                    <input type="text" id="otp" placeholder="OTP: __ __ __ __ __ __" required>
                 </div>
-            </div>
+
+                <div class="confirm-button">
+                    <div class="confirm-container">
+                        <img src="confirmButton.jpg" alt="Confirm" onclick="displayRegisterMessage()">
+                    </div>
+                </div>
+            </form>
 
         </article>
 
         <script>
             function displayRegisterMessage() {
-                alert("Your account has been registered!")
+
+                if (document.getElementById("registerForm").checkValidity()) {
+                    alert("You have been registered! Beware of fraud! If you suspect fraud, please report it as soon as possible ");
+                    window.location.href="index.html";
+                }
+                else {
+                    alert("Please fill in all required fields!")
+                }
             }
+
         </script>
 
 
