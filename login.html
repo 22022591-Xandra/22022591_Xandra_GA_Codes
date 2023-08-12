@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Xandra Chew
+ Student ID: 22022591
+ Class: E63C
+ Date/Time Last modified: 2:58PM
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XanInternational</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        header {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: ghostwhite;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .position {
+            margin: 0;
+            text-align: center;
+            border: 3px solid;
+            padding: 10px;
+
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        nav a {
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+        }
+
+        .container {
+            width: 400px;
+            height: 200px;
+            background-color: ghostwhite;
+            border-style: solid;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container a {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: black;
+        }
+
+        .confirm-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .confirm-button img {
+            width: 20%;
+        }
+
+        .singpass-container {
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .singpass-button img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body style="background-image:url(GLqVu5.jpg); background-size: cover;">
+
+
+    <body>
+        <header>
+            <h1 class="position">XanInternational</h1>
+            <h2 class="position">LOGIN YOUR ACCOUNT</h2>
+        </header>
+        <section>
+            <nav>
+                <a href="aboutUs.html"> About us </a>
+                <a href="register.html"> Register</a>
+                <a href="homepage.html">HomePage</a>
+                <a href="faq.html">FAQ</a>
+                <a href="exchangeRates.html">Exchange Rates</a>
+
+            </nav>
+
+        </section>
+
+        <article>
+            <div class="container">
+                <input type="text" id="name" placeholder="FULL NAME" required>
+                <input type="text" id="email" placeholder="EMAIL ADDRESS" required>
+                <input type="text" id="password" placeholder="PASSWORD"required>
+                <br>
+                <div class="confirm-button">
+                    <div class="confirm-container">
+                        <img src="confirmButton.jpg" alt="Confirm" onclick="displayLogInMessage()">
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="singpass-button">
+                <div class="singpass-container">
+                    <img src="qrcode_www.singpass.gov.sg.png">
+                </div>
+            </div>
+
+            <script>
+                function displayLogInMessage() {
+                    alert("You're logged in! Beware of fraud! If you suspect fraud, please report it as soon as possible")
+                     }
+            </script>
+
+
+        </article>
+        <!--Bootstrap JS Link-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    </body>
+
+</html>
